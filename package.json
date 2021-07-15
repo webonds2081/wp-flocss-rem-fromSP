@@ -1,0 +1,22 @@
+{
+	"name": "gulp-wp-flocss-rem",
+	"version": "1.0.0",
+	"main": "gulpfile.js",
+	"author": "hiroki",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^9.8.6",
+		"css-declaration-sorter": "^5.1.2",
+		"gulp": "^4.0.2",
+		"gulp-merge-media-queries": "^0.2.1",
+		"gulp-notify": "^3.2.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^8.0.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sass-glob": "^1.1.0",
+		"gulp-clean-css": "^4.3.0",
+		"postcss-cssnext": "^3.1.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-sourcemaps": "^2.6.5"
+	}
+}

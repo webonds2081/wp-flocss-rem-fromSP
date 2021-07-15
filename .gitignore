@@ -1,0 +1,6 @@
+.vscode/
+node_modules/
+twentytwentyone/
+package-lock.json/
+/package-lock.json/
+/.DS_Store/
