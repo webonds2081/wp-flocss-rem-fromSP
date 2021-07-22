@@ -34,7 +34,7 @@ body {
 }
 
 body {
-	font-family: font-family-base;
+	font-family: $font-family-base;
 	font-size: $font-size-base;
 	font-weight: $font-weight-base;
 	color: $text-color;
@@ -45,6 +45,8 @@ body {
 	overflow-wrap: break-word;
 	min-height: 100vh;
 	min-height: -webkit-fill-available;
+	position: relative;
+	z-index: -9999;
 }
 
 /* Box sizing rules */
@@ -54,58 +56,223 @@ body {
   box-sizing: border-box;
 }
 
-/* Remove default margin */
-html,
-body,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
+a,
 p,
-figure,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
 blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
 dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
 img,
-picture {
-  max-width: 100%;
-  display: block;
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
-/* Inherit fonts for inputs and buttons */
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+	vertical-align: top;
+}
+
+video,
+iframe,
+object {
+	max-width: 100%;
+	height: auto;
+	border: none;
+}
+
+
+ul,
+ol {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	table-layout: fixed;
+	border: 1px solid;
+}
+
+th,
+td {
+	padding: 4px 6px;
+	text-align: left;
+	vertical-align: top;
+	border: 1px solid;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+	content: "";
+	content: none;
+}
+
+address {
+	font-style: normal;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+label {
+	display: inline-block;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+	touch-action: manipulation;
+}
+
 input,
 button,
-textarea,
-select {
-  font: inherit;
+select,
+optgroup,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
+
+button,
+select {
+	text-transform: none;
+}
+
+select {
+	cursor: pointer;
+}
+
+textarea {
+	overflow: auto;
+	-ms-overflow-style: scrollbar;
+	resize: vertical;
+}
+
+dialog {
+	background-color: inherit;
+	border: solid;
+	color: inherit;
+	display: block;
+	height: fit-content;
+	left: 0;
+	margin: auto;
+	padding: 1em;
+	position: absolute;
+	right: 0;
+	width: fit-content;
+
+	&:not([is-open]) {
+		display: none;
+	}
+}
+
+summary {
+	display: list-item;
+	cursor: pointer;
+}
+
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
